@@ -1,0 +1,98 @@
+<section id="services" class="page-section add-top-half add-bottom-half">
+	<!-- inner-section : starts -->
+	<section class="inner-section">
+		<!-- container : starts -->
+		<section class="container">
+			<div class="row">
+				<article class="col-md-12 text-center">
+					<div class="page-heading">
+						<h1>Contact Us</h1>
+						<p>We Would like to know from you</p>
+						<img src="GalleryImages/1.png" alt="designova" ng-click="scrollAfterHeader('footer')">
+					</div>		
+				</article>
+			</div>
+		</section>
+		<!-- container : ends -->
+	</section>
+	<!-- inner-section : ends -->
+</section>
+
+<!-- Scroll Down start-->
+<section>
+    <div de-see-more="Scroll Down" ng-click="scrollAfterHeader('footer')" class="see-more">
+    <div class="text"><p class="ng-binding">Scroll Down</p></div>
+    <div svg-include="arrow.svg">
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.917px" height="88.392px" viewBox="0 0 14.917 88.392" enable-background="new 0 0 14.917 88.392" xml:space="preserve">
+<symbol id="Flèche_7" viewBox="-8.496 -47.196 16.992 94.392">
+<polygon fill="#0101DF" points="8.496,-21.836 -0.032,-47.197 -8.496,-21.836 -3.43,-21.836 -3.43,47.195 2.688,47.195,2.688,-21.836"></polygon>
+</symbol>
+<polygon class="arrow" fill="#0101DF" points="14.917,80.031 7.412,88.392 0,80.031 6.914,80.031 6.914,0 7.811,0 7.811,80.031 "></polygon>
+</svg>
+</div>
+</div>
+</section>
+<!-- Scroll down end-->
+
+
+<section id="home_features" class="page-section add-top add-bottom">
+	<!-- inner-section : starts -->
+	<section class="inner-section">
+		<!-- container : starts -->
+		<section class="container">
+			<div class="row">
+				<article class="col-md-12 text-center">
+					<div class="page-heading add-bottom-half">
+						<div style="width: 500px; margin: 0 auto;">
+<table width="100%" style="border-collapse:collapse">
+
+<tr width="100%">
+<td>
+<img alt="address" src="http://images.indianexpress.com/2014/01/mail-icon.png?w=48&#038;h=39" />
+</td>
+<td></td>
+<td>
+<h4 style="color:red">Mail To</h4>
+Plot No 5-55,<br />
+Janapriya west city,<br />
+Miyapur,<br />
+XXXXXXX,<br/>
+XXXXXXX,<br />
+India.<br/><br/><br/>
+</td>
+</tr>
+
+<tr>
+<td>
+<img alt="e mail" src="http://images.indianexpress.com/2014/01/email-icon.png?w=48&#038;h=41" />
+</td>
+<td></td>
+<td>
+<h4 style="color:red">Email Us At</h4>
+<a href="mailto:Sivaphaneendra1@gmail.com">Sivaphaneendra1@gmail.com</a><br/><br/><br/>
+</td>
+</tr>
+
+<tr>
+<td>
+<img alt="phone number" src="http://images.indianexpress.com/2014/01/phone-icon.png?w=17&#038;h=48"/>
+</td>
+<td></td>
+<td>
+<h4 style="color:red">Phone</h4>
++91-8497964186
+</td>
+</tr>
+
+</table>
+</div>
+</div>
+						
+					</div>					
+				</article>
+			</div>
+		</section>
+<!-- container : ends -->
+	</section>
+</section>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html ng-app="helpmodule">
+<head>
+<title>Welcome::Helping Hands</title>
+<script src="js/angular.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="js/jquery-2.1.0.js"></script>
+<script src="js/ui-bootstrap-tpls-0.10.0.js"></script>
+<script src="foundation-5.2.3/js/foundation/foundation.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="foundation-5.2.3/css/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" type="text/css" href="basic.css">
+<script src="js/main.js"></script>
+<script src="js/crawler.js"></script>
+
+<script type="text/javascript">
+marqueeInit({
+	uniqueid: 'mycrawler',
+	style: {
+		'width': '650px',
+		'float': 'right',
+		'background-image': 'url(helpingimages/news-slider.gif)',
+		'background-position': 'bottom right',
+		'background-repeat': 'no-repeat',
+	},
+	inc: 1, //speed - pixel increment for each iteration of this marquee's movement
+	mouse: 'cursor driven', //mouseover behavior ('pause' 'cursor driven' or false)
+	moveatleast: 1,
+	neutral: 150,
+	savedirection: true
+});
+
+function initialize() {
+  var myLatlng1 = new google.maps.LatLng(17.4968, 78.3614);
+  var myLatlng2 = new google.maps.LatLng(15.5057, 80.0499);
+  var mapOptions1 = {
+    zoom: 11,
+    center: myLatlng1
+  }
+
+  var mapOptions2 = {
+    zoom: 11,
+    center: myLatlng2
+  }
+
+  var map1 = new google.maps.Map(document.getElementById('map_canvas1'), mapOptions1);
+  var map2 = new google.maps.Map(document.getElementById('map_canvas2'), mapOptions2);
+
+  var marker1 = new google.maps.Marker({
+      position: myLatlng1,
+      map: map1,
+      title: 'Janapriya West City,Miyapur,Telanagana'
+  });
+
+   var marker2 = new google.maps.Marker({
+      position: myLatlng2,
+      map: map2,
+      title: 'Ongole,Andhra Pradesh'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+google.maps.event.addDomListener(window, 'click', initialize);
+</script>
+</head>
+<body controller="helpmaincontroller">
+
+<!--<video id="video_background" preload="auto" autoplay="autoplay" loop="loop" style="position: fixed; top: -151px; left: 0px; bottom: 0px; right: 0px; z-index: -100; width: 1288px; height: 1000px;"><source src="http://designlab.co/files/kane/video/video.mp4" type="video/mp4"><source src="http://designlab.co/files/kane/video/video.ogg" type="video/ogg"><source src="http://designlab.co/files/kane/video/video.webm" type="video/webm">bgvideo</video>-->
+
+<div class="container">
+
+	<header>	
+	<div id="logo"><a href=#/home"><img src="helpingimages/helping2.jpg"></a></div>
+
+	<!--<p style="float: right;"><iframe src="Clock.html" width="130" height="130" frameborder="0">		
+	</iframe></p>-->
+	<nav role="navigation" class="{{active}}">
+			<div class="container-fluid">
+				<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target="#nav"></button>
+				</div>
+					<div class="collaspse navbar-collapse" id="nav">
+					<ul class="nav navbar-nav">				
+					<li><a href="#/home" class="home" ng-click="active='home'">Home</a></li>
+					<li><a href="#/services" class="services" ng-click="active='services'">Services</a></li>
+					<li><a href="#/events" class="events" ng-click="active='events'">Events</a></li>
+					<!--<li><a href="events.html" target="_blank">Upcoming Events</a></li>-->
+					<li><a href="#/gallery" class="gallery" ng-click="active='gallery'">Gallery</a></li>
+					<li><a href="#/contact" class="contact Us" ng-click="active='contact'">Contact</a></li>		
+					</ul>
+					</div>
+			</div>
+	</nav>
+	</header>
+	<div class="marquee" id="mycrawler">
+	<div class="marquee_txt">
+	Latest News :: Welcome To Sample Project
+        </div>
+	</div>
+		
+        <hr/>
+
+	<div style="clear:both"></div>
+	<ng-view></ng-view>
+</div>
+<section id="footer" class="page-section add-top-min add-bottom-min">
+	<!-- inner-section : starts -->
+	<section class="inner-section">
+		<!-- container : starts -->
+		<section class="container">
+			<div class="row">
+
+
+				<div class="foot-navigation col-md-4 text-left">
+				
+					<ul>
+							<li><a href="#">Terms of Service</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">Legal &amp; Disclaimer</a></li>
+					</ul>
+				</div>
+				
+				<article class="col-md-8 text-right">
+					<div class="footer-address">
+						<p style="text-align: right">Copyright © 2010 - 2020 Siva Phaneendra Babu.<br> 
+						Created with love in India</p>
+					</div>
+				</article>
+				<div class="foot-navigation col-md-4 text-left">
+				Designed and Developed by <a href="http://sivaphaneendra.url.ph/" target="_blank">Siva Phaneendra Babu</a>
+				</div>
+				
+			</div>
+		</section>
+		<!-- container : ends -->
+	</section>
+	<!-- inner-section : ends -->
+</section>
+</body>
+</html>
